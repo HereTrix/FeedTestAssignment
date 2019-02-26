@@ -34,24 +34,39 @@ Main features:
 - Post model has cachedHeight paramether to reduce amount of cell height calculation operations.
 
 Supported server structure (GET method should use query params, POST - body):
+
 /feed
+
 Method: GET
+
 Params example:
 
 ?offset=0&limit=10
+
 Response example:
+
 [{"user":{"user_name":"D3pjxn6l","user_id":"yMAerDUG"},"content":"Some text","post_id":"PCgmNuXw","published_at":"26-02-2019T16:38:39"}]
 
 /login
+
 Method: POST
+
 Params example:
+
 {"email":email, "password":password}
+
 Response example:
+
 {"token":"askjh"}
 
 /feed
+
 Method: POST
+
 Params example:
+
 {"text":content}
+
 Response example:
+
 {"user":{"user_name":"D3pjxn6l","user_id":"yMAerDUG"},"content":"Some text","post_id":"PCgmNuXw","published_at":"26-02-2019T16:38:39"}
