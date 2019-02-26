@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uoy-R8-kED">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Post List View Controller-->
+        <scene sceneID="e7I-Ma-mh7">
+            <objects>
+                <viewController storyboardIdentifier="PostListViewController" id="0iD-46-nKJ" customClass="PostListViewController" customModule="FeedTestAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8q2-U8-TB8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CaL-zJ-SN9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="3Ea-2z-WX7">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="0iD-46-nKJ" id="Wer-M5-yvs"/>
+                                    <outlet property="delegate" destination="0iD-46-nKJ" id="WTf-F3-d8a"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CaL-zJ-SN9" firstAttribute="leading" secondItem="ZgQ-Lz-uWz" secondAttribute="leading" id="ObE-Vo-N2E"/>
+                            <constraint firstAttribute="trailing" secondItem="CaL-zJ-SN9" secondAttribute="trailing" id="ckV-jn-863"/>
+                            <constraint firstItem="CaL-zJ-SN9" firstAttribute="top" secondItem="ZgQ-Lz-uWz" secondAttribute="top" id="dS0-Ow-Cpn"/>
+                            <constraint firstItem="ZgQ-Lz-uWz" firstAttribute="bottom" secondItem="CaL-zJ-SN9" secondAttribute="bottom" id="j2m-uV-qTh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZgQ-Lz-uWz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HCa-YQ-Tm6">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="J8t-W1-7uH">
+                            <connections>
+                                <action selector="logout" destination="0iD-46-nKJ" id="Jwn-ZR-KNk"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="   +" style="done" id="F7F-Bd-4wM">
+                            <connections>
+                                <segue destination="hD4-uD-OnJ" kind="show" id="pyy-x4-j5g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="CaL-zJ-SN9" id="3bs-iV-Csz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1vY-1C-zuy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1410" y="133"/>
+        </scene>
+        <!--Create Post View Controller-->
+        <scene sceneID="jWZ-PX-fWa">
+            <objects>
+                <viewController id="hD4-uD-OnJ" customClass="CreatePostViewController" customModule="FeedTestAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SmC-5k-qle">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jVi-fJ-0OA">
+                                <rect key="frame" x="20" y="64" width="335" height="583"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="hD4-uD-OnJ" id="Vxf-yG-5me"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jVi-fJ-0OA" secondAttribute="trailing" constant="20" id="ZBX-5n-Bhb"/>
+                            <constraint firstItem="jVi-fJ-0OA" firstAttribute="leading" secondItem="2W8-dM-UfX" secondAttribute="leading" constant="20" id="nzS-rC-aUU"/>
+                            <constraint firstItem="jVi-fJ-0OA" firstAttribute="top" secondItem="2W8-dM-UfX" secondAttribute="top" id="tz2-jd-y1S"/>
+                            <constraint firstItem="2W8-dM-UfX" firstAttribute="bottom" secondItem="jVi-fJ-0OA" secondAttribute="bottom" constant="20" id="u0M-ge-spR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2W8-dM-UfX"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="cQ6-eS-1pN">
+                        <barButtonItem key="backBarButtonItem" title="back" id="oSQ-zG-ctF"/>
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="n0n-TU-EUL">
+                            <connections>
+                                <action selector="postAction" destination="hD4-uD-OnJ" id="eP7-fC-Nvi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="jVi-fJ-0OA" id="Wk9-ME-MiX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hvy-Ss-hh6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2169" y="131"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JaN-hc-P5b">
+            <objects>
+                <navigationController id="Uoy-R8-kED" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8HV-hp-dBw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0iD-46-nKJ" kind="relationship" relationship="rootViewController" id="w3J-mz-wFm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hKm-J6-JSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="647" y="133"/>
+        </scene>
+    </scenes>
+</document>

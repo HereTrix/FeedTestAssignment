@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  PostTestAssignment
+
+  Created by HereTrix on 2/25/19.
+  Copyright © 2019 CHISoftware. All rights reserved.
+*/
+
+"EmptyEmailOrPassword" = "Fields can't be empty";
+"OK" = "OK";
+"SomethingWrong" = "Something went wrong. Please, try again later.";
+"EnterText" = "Please, enter some text You want to share";
+"UnknownError" = "Unknown Error";
+"IncorrectPostLength" = "You've reached maximum length";
