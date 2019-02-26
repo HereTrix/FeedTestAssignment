@@ -1,7 +1,8 @@
 # FeedTestAssignment
 
 Simple application which shows main principes of work.
-Time spent ~16h
+
+Time spent 13h47m
 
 Note: Don't forget to install cocoapods!
 
